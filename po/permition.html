@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>权限说明</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Android 端
+		
+        一、电话权限（PHONE）
+        权限名称：
+        READ_PHONE_STATE 读取电话状态
+        ANSWER_PNOHE_CALLS 接听来电（安卓8.0及以上版本需请求访问）
+        使用场景/目的：用于来电/拨打电话时停止当前播放功能、视频铃声功能
+        是否询问：是
+        是否可关闭：是
+        
+        二、设备存储/相册权限（STORAGE）
+        权限名称：
+        READ_EXTERNAL_STORAGE 读取外置存储器
+        WRITE_EXTERNAL_STORAGE 写入外置存储器
+        使用场景/目的：上传/更新账号头像、图文/视频制作与发布、评论、发帖、播放本地音视频、下载，使用自定义背景
+        是否询问：是
+        是否可关闭：是
+        
+        三、相机权限（CAMERA）
+        权限名称：CAMERA 拍摄
+        使用场景/目的：使用设置或更新头像/个人空间背景图片、相册管理、图像保存、、录制、扫一扫、自定义皮肤、使用自定义背景
+        是否询问：是
+        是否可关闭：是
+        
+        四、麦克风权限（MICROPHONE）
+        权限名称：RECORD_AUDIO 录音
+        使用场景/目的：获取安卓自带的fft数据用做频谱展示、语音控制切歌
+        是否询问：是
+        是否可关闭：是
+        
+        五、日历权限（CALENDAR）
+        权限名称：
+        READ_CALENDAR 读取日历
+        WRITE_CALENDAR 写入日历
+        使用场景/目的：使用节目预约功能
+        是否询问：是
+        是否可关闭：是
+        
+        六、通讯录权限（CONTACTS）
+        权限名称：READ_CONTACTS 读取通讯录
+        使用场景/目的：使用添加好友、邀请通讯录好友功能、好友推荐功能及设置来电视频功能
+        是否询问：是
+        是否可关闭：是
+        
+        七、位置权限（LOCATION）
+        权限名称：
+        ACCESS_COARSE_LOCATION 访问精确位置
+        ACCESS_FINE_LOCATION 访问粗略位置
+        ACCESS_BACKGROUND_LOCATION 在后台使用位置信息
+        使用场景/目的：使用跑步模式、附近、区域性榜单、按距离搜索等基于地理位置所提供的定位功能；基于版权方地域限制等需要进一步确认用户位置时
+        是否询问：是
+        是否可关闭：是
+        
+        八、通话记录(CALL_LOG)
+        权限名称：READ_CALL_LOG 读取通话记录
+        权限名称：使用来电视频功能时，为了来电号码的正常显示
+        是否询问：是
+        是否可关闭：是
+        
+        九、特殊敏感权限
+        悬浮窗权限
+        权限名称：SYSTEM_ALERT_WINDOW
+        使用场景/目的：使用竖屏MV、桌面歌词、直播间小窗模式、桌面识曲、充电动效功能、视频铃声功能时
+        是否询问：是
+        是否可关闭：是
+        
+        读取应用使用情况权限
+        权限名称：PACKAGE_USAGE_STATS
+        使用场景/目的：基于安全保障功能或拉起第三方应用、开启充电动效的游戏模式或煲剧模式时
+        是否询问：是
+        是否可关闭：是
+        
+        获取通知栏权限
+        权限名称：BIND_NOTIFICATION_LISTENER_SERVICE
+        使用场景/目的：开启充电动效功能、视频铃声功能时
+        是否询问：是
+        是否可关闭：是
+        
+        辅助模式
+        权限名称：辅助（无障碍）模式（BIND_ACCESSIBILITY_SERVICE）
+        使用场景/目的：用于设置视频铃声时，自动化开启所需的权限
+        是否询问：是
+        是否可关闭：是
+        
+        以上可关闭的权限，用户可通过所用设备的的设置功能关闭，也可通过我们产品客户端内隐私设置功能实现，具体路径为首页-侧边栏-隐私中心-隐私管理 。
+        
+        
+        iOS 端
+        一、读取手机本地音乐权限
+        权限名称：NSAppleMusicUsageDescription
+        使用场景/目的：用于在 App 的本地功能，播放手机内的本地音乐
+        是否询问：是
+        是否可关闭：是
+        
+        二、蓝牙权限
+        权限名称：NSBluetoothAlwaysUsageDescription
+        使用场景/目的：用于系统 > = iOS 13上连接手机蓝牙，使用耳机语音点歌功能
+        是否询问：是
+        是否可关闭：是
+        
+        三、相册存储权限
+        权限名称：NSPhotoLibraryAddUsageDescription
+        使用场景/目的：向相册中添加内容，用于保存图片和视频到手机相册
+        是否询问：是
+        是否可关闭：是
+        
+        四、相册读取权限
+        权限名称：NSPhotoLibraryUsageDescription
+        使用场景/目的：上传/更新账号头像、图文/视频制作与发布、评论、发帖、播放本地音视频、下载，使用自定义背景
+        是否询问：是
+        是否可关闭：是
+        
+        五、日历权限
+        权限名称：NSCalendarsUsageDescription
+        使用场景/目的：用于开播提醒、活动提醒
+        是否询问：是
+        是否可关闭：是
+        
+        六、相机权限
+        权限名称：NSCameraUsageDescription
+        使用场景/目的：使用设置或更新头像/个人空间背景图片、相册管理、图像保存、、录制、扫一扫、自定义皮肤、使用自定义背景
+        是否询问：是
+        是否可关闭：是
+        
+        七、通讯录权限
+        权限名称：NSContactsUsageDescription
+        使用场景/目的：读取用户通讯录，用于添加好友、邀请通讯录好友功能及好友推荐功能
+        是否询问：是
+        是否可关闭：是
+        
+        八、本地网络权限
+        权限名称：NSLocalNetworkUsageDescription
+        使用场景/目的：获取本地网络权限，用于 DLNA 投屏
+        是否询问：是
+        是否可关闭：是
+        
+        九、持续定位权限 > = iOS 11
+        权限名称：NSLocationAlwaysAndWhenInUseUsageDescription
+        使用场景/目的：基于安全保障功能或拉起第三方应用、开启充电动效的游戏模式或煲剧模式时
+        是否询问：是
+        是否可关闭：是
+        
+        十、持续定位权限 < iOS 11
+        权限名称：NSLocationAlwaysUsageDescription
+        使用场景/目的：持续和仅 App 被使用时获取地理位置，用于跑步听歌功能
+        是否询问：是
+        是否可关闭：是
+        
+        十一、定位权限
+        权限名称：NSLocationWhenInUseUsageDescription
+        使用场景/目的：仅 App 被使用时获取地理位置，用于歌曲版权地区限制及发现附近的人、主播、K歌功能
+        是否询问：是
+        是否可关闭：是
+        
+        十二、麦克风权限
+        权限名称：NSMicrophoneUsageDescription
+        使用场景/目的：使用麦克风，用于直播、听歌识曲、哼唱识曲、声音录制、K房上麦、斗歌、朗读业务、语音聊天、连麦功能
+        是否询问：是
+        是否可关闭：是
+        
+        十三、访问运动与健康数据权限
+        权限名称：NSMotionUsageDescription
+        使用场景/目的：访问运动与健康数据,用于跑步听歌访问你的行走步数
+        是否询问：是
+        是否可关闭：是
+        
+        十四、Siri 权限
+        权限名称：NSSiriUsageDescription
+        使用场景/目的：访问 Siri 权限，用于通过Siri来播放歌曲
+        是否询问：是
+        是否可关闭：是
+        
+        十五、IDFA 广告标识权限
+        权限名称：NSUserTrackingUsageDescription
+        使用场景/目的：访问IDFA 广告标识，用于个性化推荐内容及广告
+        是否询问：是
+        是否可关闭：是
+        
+        以上可关闭的权限，用户可通过所用设备的的设置功能关闭，也可通过我们产品客户端内隐私设置功能实现，具体路径为首页-侧边栏-隐私中心-隐私管理。
+        
+
+
+    </pre>
+</body>
+</html>

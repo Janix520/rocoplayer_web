@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Site Metas -->
+		<title>若可音乐</title>
+		<meta name="keywords"
+			content="若可,若可音乐,若可音乐播放器,若可声学音乐,rocoplayer,dsp,音频信号,音频,播放器,发烧,专业,音乐,音质,效果,均衡器,安卓,苹果,ios,android,pc,桌面,若可音乐下载,若可音乐官网,官网,下载">
+		<meta name="description" content="若可音乐播放器(全名：若可声学音乐播放器)是一款面向音乐发烧友的具有顶级音质的专业播放软件。">
+		<meta name="author" content="MisterZhang">
+
+		<!-- Site Icons -->
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Site CSS -->
+		<link rel="stylesheet" href="style.css">
+		<!-- ALL VERSION CSS -->
+		<link rel="stylesheet" href="css/versions.css">
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- elementui -->
+		<!-- 引入样式 -->
+		<!-- <link rel="stylesheet" href="css/unpkg.com_element-ui@2.15.14_lib_theme-chalk_index.css"> -->
+		<!-- 引入组件库 -->
+		<!-- <script src="js/unpkg.com_element-ui@2.15.14_lib_index.js"></script> -->
+		
+		<script src="js/axios@1.4.0.min.js"></script>
+
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body class="app_version" data-spy="scroll" data-target="#navbarApp" data-offset="98">
+
+		<!-- LOADER -->
+		<!-- <div id="preloader">
+        <img class="preloader" src="images/loaders/loader-app.gif" alt="">
+    </div> end loader -->
+		<!-- END LOADER -->
+		<div class="top-bar">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="left-soi">
+							<ul>
+								<li class="social-links"><a href="#" onclick="prepare()"><i class="fa fa-apple"></i></a></li>
+								<li class="social-links"><a href="#" onclick="downloadAndroid()"><i class="fa fa-android"></i></a></li>
+								<li class="social-links"><a href="#" onclick="downloadWindows()"><i class="fa fa-windows"></i></a></li>
+								<!-- <li class="social-links"><a href="#"><i class="fa fa-apple"></i></a></li>
+							<li class="social-links"><a href="#"><i class="fa fa-android"></i></a></li>
+							<li class="social-links"><a href="#"><i class="fa fa-windows"></i></a></li> -->
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="right-btn">
+							<!-- <a href="#" class="btn-radius btn-brd">Get Support</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="header header_style_01">
+			<nav class="navbar header-nav navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="index.html"><img style="height: 80px;" src="images/logos/logo-app.png"
+							alt="image"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
+						aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end" id="navbarApp">
+						<ul class="navbar-nav">
+							<li><a class="nav-link active" href="#home">首页</a></li>
+							<li><a class="nav-link" href="#features">特性</a></li>
+							<li><a class="nav-link" href="#screenshots">分享</a></li>
+							<li><a class="nav-link" href="#team">团队</a></li>
+							
+							<!-- <li><a class="nav-link" target="_blank" href="https://www.rocoplayer.com/unifiedLogin">登入/注册</a></li> -->
+							<!-- <li><a class="nav-link" href="#pricing">Pricing</a></li> -->
+							<!-- <li><a class="nav-link" href="#testimonials">客户</a></li> -->
+							<!-- <li><a class="nav-link" href="#purchase">Purchase</a></li> -->
+							<!-- <li><a class="nav-link" href="#support">支持</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div id="home" class="parallax first-section" style="background-image:url('uploads/bg-img.jpg');">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="big-tagline">
+							<h2>若可音乐播放器</h2>
+							<p class="lead">全称若可声学音乐播放器，是一款面向音乐发烧友的具有顶级音质的专业播放软件，具有迄今为止数字播放器中最强大的音频实时处理能力。</p>
+							<a data-scroll href="#" onclick="downloadAndroid()" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play"
+									aria-hidden="true"></i> 安卓版本（V1.3.6）20230914更新</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a data-scroll href="#" onclick="downloadWindows()"
+								class="btn btn-light btn-radius btn-brd"><!-- <i class="fa fa-apple" aria-hidden="true"></i> --><i
+									class="fa fa-play" aria-hidden="true"></i> PC端版本（V1.1.0）20230613更新</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a data-scroll href="#order" onclick="prepare()"
+								class="btn btn-light btn-radius btn-brd"><!-- <i class="fa fa-apple" aria-hidden="true"></i> --><i
+									class="fa fa-play" aria-hidden="true"></i> 苹果版本（计划中）</a>
+						</div>
+					</div>
+					<div class="app_iphone_01 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
+						data-wow-delay="0.2s">
+						<img src="uploads/app_iphone_new01.png" alt="" class="img-fluid">
+					</div>
+					<div class="app_iphone_02 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
+						data-wow-delay="0.5s">
+						<img src="uploads/app_iphone_new02.png" alt="" class="img-fluid">
+					</div>
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end section -->
+
+		<div id="features" class="section wb">
+			<div class="container">
+				<div class="section-title text-center">
+					<h3>播放器特性</h3>
+					<p class="lead">
+						包含高音中音低音调节，包含可以实现自定义n段的高级参数均衡器，自定义滤波器类型、频率，并且带有带宽控制（q），解码上已支持绝大部分常见音乐格式（mp3、wav、wma、flac、ape、dts、ogg、aac……等），可配合云端音频实时处理（云dsp），可实现跨平台（安卓、ios、小程序、车机、桌面），目标是能为每个用户每个设备提供最顶级音质的音乐欣赏。
+						<!-- <br>auctor nisi elit consequat ipsum, nec sagittis sem! -->
+					</p>
+				</div>
+				<!-- end title -->
+
+				<div id="default" class="row clearfix zenith_slider">
+
+					<!--The First row-->
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 left-row">
+						<ul class="features-left">
+							<li class="highlight lhgh" data-index="0">
+								<i class="flaticon-wordpress-logo effect-1"></i>
+								<div class="fl-inner">
+									<h4>数字调音台</h4>
+									<p>包含所有音频效果器的入口和开关</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+
+							<li class="highlight lhgh" data-index="1">
+								<i class="flaticon-windows effect-1"></i>
+								<div class="fl-inner">
+									<h4>高级参量均衡器</h4>
+									<p>支持自定义n段、自定义滤波类型、Q品质因子</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+
+							<li class="highlight lhgh" data-index="2">
+								<i class="flaticon-price-tag effect-1"></i>
+								<div class="fl-inner">
+									<h4>低音中音高音</h4>
+									<p>能快速增强声音的三频部分独立调节，清澈的低音、通透人声、不刺耳的高音</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+
+							<li class="highlight lhgh" data-index="3">
+								<i class="flaticon-new-file effect-1"></i>
+								<div class="fl-inner">
+									<h4>差分环绕</h4>
+									<p>真正的差分环绕听感需要配合强劲的低音，支持调整旋转方向、延迟时长</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+						</ul>
+					</div>
+					<!-- .row .left-row -->
+
+					<div class="highlights-phone col-lg-4 col-md-4 col-sm-12 col-xs-12 wht">
+
+						<div class="phone-holder">
+							<div id="fon"></div>
+							<div class="hgh-linner hgi" data-index="0">
+								<img width="190" height="320" src="shot/数字调音台.jpg"
+									class="attachment-highlight wp-post-image" alt="screen" />
+							</div>
+							<div class="hgh-linner hgi" data-index="1">
+								<img width="234" height="398" src="shot/高级参量均衡器.jpg"
+									class="attachment-highlight wp-post-image" alt="screensdst" />
+							</div>
+							<div class="hgh-linner hgi" data-index="2">
+								<img width="234" height="398" src="shot/低音中音高音.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_09" />
+							</div>
+							<div class="hgh-rinner hgi" data-index="3">
+								<img width="234" height="398" src="shot/差分环绕.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_07" />
+							</div>
+							<div class="hgh-rinner hgi" data-index="4">
+								<img width="234" height="398" src="shot/立体声混响.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_08" />
+							</div>
+							<div class="hgh-rinner hgi" data-index="5">
+								<img width="234" height="398" src="shot/电子管模拟器.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_06" />
+							</div>
+							<div class="hgh-rinner hgi" data-index="6">
+								<img width="234" height="398" src="shot/时间拉伸器.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_06" />
+							</div>
+							<div class="hgh-rinner hgi" data-index="7">
+								<img width="234" height="398" src="shot/脉冲.jpg"
+									class="attachment-highlight wp-post-image" alt="screen_06" />
+							</div>
+						</div>
+					</div>
+
+					<!--The Second row-->
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 right-row">
+						<ul class="features-right">
+							<li class="highlight rhgh" data-index="4">
+								<i class="flaticon-pantone effect-1"></i>
+								<div class="fr-inner">
+									<h4>立体声混响</h4>
+									<p>比较常见的效果之一，但是具有阻尼、空间大小、潮湿度、干燥度、立体声宽度的独立调节功能</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+							<li class="highlight rhgh" data-index="5">
+								<i class="flaticon-cloud-computing effect-1"></i>
+								<div class="fr-inner">
+									<h4>电子管效果模拟</h4>
+									<p>模拟电子管失真，支持失真量、低电平线性度、失真程度、失真与原声的混合度独立调节</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+							<li class="highlight rhgh" data-index="6">
+								<i class="flaticon-line-graph effect-1"></i>
+								<div class="fr-inner">
+									<h4>时间拉伸器</h4>
+									<p>支持播放变速不变调、变调不变速</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+							<li class="highlight rhgh" data-index="7">
+								<i class="flaticon-coding effect-1"></i>
+								<div class="fr-inner">
+									<h4>脉冲</h4>
+									<p>一种卷积混音算法，导入加载脉冲文件，支持调节脉冲有效范围</p>
+								</div>
+							</li>
+							<!-- .highlight .left-row -->
+						</ul>
+					</div>
+					<!-- .row .left-row -->
+
+				</div>
+				<!--Highlights close-->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end section -->
+
+		<div class="how-its-work clearfix">
+			<div class="hc colon1">
+				<h2>1</h2>
+				<h3>打开应用商店</h3>
+				<p class="lead">直接搜索若可音乐，当然也可以直接从上方链接下载</p>
+			</div>
+			<!-- end col -->
+
+			<div class="hc colon2">
+				<h2>2</h2>
+				<h3>下载安装</h3>
+				<p class="lead">请注意未经应用商店下载安装可能会有提示</p>
+			</div>
+			<!-- end col -->
+
+			<div class="hc colon3">
+				<h2>3</h2>
+				<h3>打开若可音乐</h3>
+				<p class="lead">数字调音台挑选预设，效果立竿见影，可以快速了解若可</p>
+			</div>
+			<!-- end col -->
+
+			<div class="hc colon4">
+				<h2>4</h2>
+				<h3>享受音乐</h3>
+				<p class="lead">慢慢享受顶级音乐吧</p>
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end how-its-work -->
+
+		<div id="screenshots" class="section wb">
+			<div class="container">
+				<div class="section-title text-center">
+					<h3>部分功能截图分享</h3>
+					<p class="lead">以下是播放器的部分功能的展示</p>
+				</div>
+				<!-- end title -->
+
+				<div class="owl-screenshots owl-carousel owl-theme">
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/首页.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/首页.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/数字调音台.jpg" data-rel="prettyPhoto[gal]"
+									class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="shot/数字调音台.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/预设.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/预设.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/压限器.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/压限器.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/交叉馈音.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/交叉馈音.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/列表.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/列表.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/谐波激励器.jpg" data-rel="prettyPhoto[gal]"
+									class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="shot/谐波激励器.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/镶边效果器.jpg" data-rel="prettyPhoto[gal]"
+									class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+								<img src="shot/镶边效果器.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/移相器.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/移相器.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+						<!-- end service -->
+					</div>
+					<!-- end col -->
+
+					<div class="owl-screen">
+						<div class="service-widget">
+							<div class="post-media entry wow fadeIn">
+								<a href="shot/播放页面.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i
+										class="flaticon-unlink"></i></a>
+								<img src="shot/播放页面.jpg" alt="" class="img-fluid img-rounded">
+								<div class="magnifier"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="owl-screen">
+                    <div class="service-widget">
+                        <div class="post-media entry wow fadeIn">
+                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                            <div class="magnifier"></div>
+                        </div>
+                    </div>
+                </div> -->
+
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end section -->
+
+		<div class="parallax section noover" style="background-image:url('uploads/ben_img.jpg');">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-7 col-sm-12">
+						<div class="customwidget text-left">
+							<h1>关注我们</h1>
+							<p>后期将推出一些调节教程、以及知识科普。</p>
+							<ul class="list-inline">
+								<li class="list-inline-item">高级参量均衡器教程</li>
+
+								<!-- <li class="list-inline-item"><i class="flaticon-apple"></i> 高级参量均衡器教程</li>
+                            <li class="list-inline-item"><i class="flaticon-android"></i> Available on Android</li>
+                            <li class="list-inline-item"><i class="flaticon-amazon-logo"></i> Available on Amazon</li> -->
+							</ul>
+							<!-- end list -->
+							<a href="#features" data-scroll class="btn btn-light btn-radius btn-brd">学习更多</a>
+						</div>
+					</div>
+					<!-- end col -->
+					<div class="col-md-6 iphones hidden-sm">
+						<div class="text-center move image-center hidden-sm hidden-xs">
+							<img src="uploads/iphones_new.png" alt="" class="img-fluid wow fadeInUp">
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end section -->
+
+		<div id="team" class="section wb">
+			<div class="container">
+				<div class="section-title text-center">
+					<h3>我们的团队</h3>
+					<p class="lead">对音频开发的热爱、对音质的追求、对音效算法的研究、坚持不懈的努力、无数个夜晚的琢磨<br />探索音频奥秘以及技术上的突破，造就了这款顶级音乐播放器</p>
+				</div>
+				<!-- end title -->
+
+				<!-- <div class="row dev-list text-center">
+				
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="widget clearfix">
+                        <img src="uploads/team_01.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Soren Bo Bostian</h3>
+                            <small>Senior Art Director</small>
+                        </div>
+                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="widget clearfix">
+                        <img src="uploads/team_02.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Bryan Saftler</h3>
+                            <small>Creative Technologist Microsoft</small>
+                        </div>
+                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="widget clearfix">
+                        <img src="uploads/team_03.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="widget-title">
+                            <h3>Matthew Bayliss</h3>
+                            <small>Front End Developer</small>
+                        </div>
+                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn global-radius"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end section -->
+
+		<!-- app统计 -->
+		<!-- <div class="parallax section" style="background-image:url('uploads/ben_img_2.jpg');">
+        <div class="container">
+            <div class="row text-left stat-wrap">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-apple"></i></span>
+                    <p class="stat_count_download">12500</p>
+                    <h3>App Store</h3>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-amazon-logo"></i></span>
+                    <p class="stat_count_download">31000</p>
+                    <h3>Amazon</h3>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-android"></i></span>
+                    <p class="stat_count_download">15788</p>
+                    <h3>Google Play</h3>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-windows"></i></span>
+                    <p class="stat_count_download">21000</p>
+                    <h3>Windows App</h3>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+	<div id="pricing" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>若可的来源</h3>
+                <p class="lead">
+					在这里先讲一下音频音效，其实是一门“玄学”，有的人喜欢听震撼低音，有的喜欢通透人声，总之“好听”是没有一个标准的，每个人喜好都不一样，
+					想要做出一款牛逼的“发烧”音乐播放器不仅需要程序员，还要程序员懂音频。从我（主开发者）慢慢接触音响后，我就慢慢变成了一个音频发烧友，
+					奈何家里的音响只是千元入门级别，只能靠着软件的均衡器来宠我的耳朵，当时找到了电脑版foobar2000，可以安装插件，调节31段均衡器，自以为很专业。。。
+					从我上高中的时候，还流行着java手机、诺基亚塞班系统，那时候还流行着和打火机一样大的mp3播放器和手机一样大的mp4，
+					而安卓系统手机也刚问世，大概就在安卓1.6-2.0版本的时候（索爱、HTC），出现了两款非常厉害的音乐播放器分别是rockbox和poweramp，均衡器做的非常出色，
+					使用后才有了对软件均衡器的兴趣，因为实在太赞👍了，普通耳机可以听出连千元机耳机也听不出的感觉，低频淳厚而不浑浊、中频饱满有力而通透、
+					高频明亮清晰而不破音，特别是rockbox细节非常到位，可惜好景不长，rockbox也是由志愿者开发和维护的项目，可能因为他们不再有时间或兴趣参与开发，不继续维护，
+					以至于社区倒下了，想来这些年播放器层出不穷，也没有找到一款令我满意的，自此开始了我的音频开发之路研究，2022年做了一个简单的demo版本，以rockbox中rock的谐音
+					取名为<strong>若可</strong>，从2023年开始重构了一个全新安卓版本。</p>
+            </div>
+
+            
+        </div>
+    </div>
+	
+	
+	<!-- <div id="pricing" class="section lb">
+	    <div class="container">
+	        <div class="section-title text-center">
+	            <h3>Ready to get started?</h3>
+	            <p class="lead">Get the red carpet treatment <strong>just $39 per month!</strong> It is estimated that 3.5 million established by personal blogs.<br> From each other, we share paid WordPress themes WP Service...</p>
+	        </div>
+	
+	        <div class="row">
+	            <div class="col-md-12">
+	                <div class="tab-content">
+	                    <div class="tab-pane active fade show" id="tab1">
+	                        <div class="row text-center">
+	                            <div class="col-md-4">
+	                                <div class="pricing-table pricing-table-highlighted">
+	                                    <div class="pricing-table-header grd1">
+	                                        <h2>Free Access</h2>
+	                                        <h3>$85/month</h3>
+	                                    </div>
+	                                    <div class="pricing-table-space"></div>
+	                                    <div class="pricing-table-features">
+	                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+	                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+	                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+	                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+	                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+	                                    </div>
+	                                    <div class="pricing-table-sign-up">
+	                                        <a href="#" class="btn btn-dark btn-radius btn-brd grd1 effect-1">Order Now</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="pricing-table pricing-table-highlighted">
+	                                    <div class="pricing-table-header grd1">
+	                                        <h2>1 Year Membership</h2>
+	                                        <h3>$59/year</h3>
+	                                    </div>
+	                                    <div class="pricing-table-space"></div>
+	                                    <div class="pricing-table-text">
+	                                        <p>This is a perfect choice for small businesses and startups.</p>
+	                                    </div>
+	                                    <div class="pricing-table-features">
+	                                        <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
+	                                        <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
+	                                        <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
+	                                        <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
+	                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+	                                    </div>
+	                                    <div class="pricing-table-sign-up">
+	                                        <a href="#" class="btn btn-dark btn-radius btn-brd grd1 effect-1">Learn More</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	
+	                            <div class="col-md-4">
+	                                <div class="pricing-table pricing-table-highlighted">
+	                                    <div class="pricing-table-header grd1">
+	                                        <h2>Lifetime Update</h2>
+	                                        <h3>$85/one-time</h3>
+	                                    </div>
+	                                    <div class="pricing-table-space"></div>
+	                                    <div class="pricing-table-features">
+	                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+	                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+	                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+	                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+	                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+	                                    </div>
+	                                    <div class="pricing-table-sign-up">
+	                                        <a href="#" class="btn btn-dark btn-radius btn-brd grd1 effect-1">Order Now</a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div> -->
+
+		<!-- <div id="testimonials" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Happy Clients</h3>
+                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Appfast website template!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                        </div>
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                        </div>
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                        </div>
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                        </div>
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                        </div>
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+		<!-- <div id="purchase" class="parallax section db" style="background-image:url('uploads/pr_bg.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Started from $90.00</h2>
+                <h3>Purchase Now!</h3>
+                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about Appfast website template!</p>
+            </div>
+
+            <div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btn-buy apple-button">
+                        <a href="#"><i class="flaticon-android alignleft"></i> Download on the <strong>Google Play</strong></a>
+                    </div>
+                </div>
+				
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btn-buy apple-button">
+                        <a href="#"><i class="flaticon-apple alignleft"></i> Download on the <strong>App Store</strong></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btn-buy apple-button">
+                        <a href="#"><i class="flaticon-windows alignleft"></i> Download on the <strong>Windows</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+		<!-- 联系我们 -->
+		<!-- <div id="support" class="section" style="background-image:url('uploads/form_bg.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Get in Touch</h3>
+				<div class="info-box" data-toggle="tooltip" data-placement="right" title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">
+					<i class="fa fa-question-circle" aria-hidden="true"></i>
+				</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                            <fieldset class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+		<!--    <section class="section nopad cac text-center">
+        <a href="#"><h3></h3></a>
+    </section> -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="widget clearfix">
+							<div class="widget-title">
+								<img style="height: 130px;" src="images/logos/logo-app.png" alt="">
+								<small>让每一个用户都能享受</small>
+							</div>
+							<p>若可音乐还会持续优化，持续更新效果器</p>
+							<p>如果您感兴趣，也可以关注我们官网，有什么建议可以发送邮件</p>
+						</div>
+						<!-- end clearfix -->
+					</div>
+					<!-- end col -->
+
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+						<div class="widget clearfix">
+							<div class="widget-title">
+								<h3>联系方式</h3>
+							</div>
+
+							<ul class="footer-links">
+								<li><a href="mailto:#">service@rocoplayer.com</a></li>
+								<li><a href="#">www.rocoplayer.com</a></li>
+								<li>中国（江苏）自由贸易试验区苏州片区苏州工业园区翠薇街9号月亮湾国际商务中心1幢1101室A区8101单元</li>
+								<!-- <li>+88 8 8888 8888</li> -->
+							</ul>
+							<!-- end links -->
+						</div>
+						<!-- end clearfix -->
+					</div>
+					<!-- end col -->
+
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+						<div class="footer-distributed widget clearfix">
+							<div class="widget-title">
+								<h3>其他</h3>
+								<!-- <p>用户协议</p>
+							<p>隐私协议</p> -->
+								<ul style="margin-top: 30px;">
+									<li><a href="https://www.rocoplayer.com/prod-api/app/policy/get?type=0">用户协议</a>
+									</li>
+									<li><a href="https://www.rocoplayer.com/prod-api/app/policy/get?type=1">隐私政策</a>
+									</li>
+								</ul>
+							</div>
+							<!-- <div class="footer-right">
+							<form method="get" action="#">
+								<input placeholder="Subscribe our newsletter.." name="search">
+								<i class="fa fa-envelope-o"></i>
+							</form>
+						</div> -->
+						</div>
+						<!-- end clearfix -->
+					</div>
+					<!-- end col -->
+
+					<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+						<div class="widget clearfix">
+							<div class="widget-title">
+								<h3>社交</h3>
+							</div>
+							<ul class="footer-links">
+								<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+								<li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i> Dribbble</a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+							</ul>
+							<!-- end links -->
+						</div>
+						<!-- end clearfix -->
+					</div>
+					<!-- end col -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</footer>
+		<!-- end footer -->
+
+		<div class="copyrights">
+			<div class="container">
+				<div class="footer-distributed">
+					<div class="footer-left">
+						<p class="footer-company-name">Copyright &copy; 2023.苏州艾恩维智能科技有限公司 All rights reserved.</p>
+						<p class="footer-company-name"><a class="footer-company-name"
+								href="https://beian.miit.gov.cn" target="_blank">苏ICP备2023008903号</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end copyrights -->
+
+		<div id="showdownload" class="alert alert-warning" style="position: absolute;top: 50%;left: 45%;display: none;z-index: 99999;">
+			<strong>提示!</strong> 已经在开发中，敬请期待。
+		</div>
+
+		<a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+		<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- ALL JS FILES -->
+		<script src="js/all.js"></script>
+		<script src="https://lib.sinaapp.com/js/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<!-- ALL PLUGINS -->
+		<script src="js/custom.js"></script>
+		<script src="js/zenith.js"></script>
+		<script>
+			$('#default').zenith({
+				layout: 'default',
+				slideSpeed: 450,
+				autoplaySpeed: 2000
+			});
+
+			//提示下载
+			function prepare() {
+				var showdownload = document.getElementById("showdownload");
+				showdownload.style.display = "block";
+				setTimeout(() => {
+					showdownload.style.display = "none";
+				}, 2500)
+			}
+			
+			//下载
+			function downloadAndroid() {
+				this.axios.get("https://www.rocoplayer.com/prod-api/app/update/stat?type=1").then((res)=>{
+				})
+				// window.location.href = 'https://www.rocoplayer.com/download/file/若可音乐_V1.3.3.apk';
+				window.location.href = 'https://www.rocoplayer.com/download/file/若可音乐-1.3.6-build-36.apk';
+			}
+			
+			//下载windows
+			function downloadWindows() {
+				this.axios.get("https://www.rocoplayer.com/prod-api/app/update/stat?type=2").then((res)=>{
+				})
+				window.location.href = 'https://www.rocoplayer.com/download/file/若可音乐_V1.1.0.exe';
+			}
+			
+			 $(document).ready(()=>{
+				 this.axios.get("https://www.rocoplayer.com/prod-api/app/update/stat?type=0").then((res)=>{
+				 	// if(res.status != 200){
+				 	// 	return;
+				 	// }
+				 	// var data = res.data;
+				 	// if(data && data.code == 200){
+				 	// 	var content = data.data;
+				 	// 	if(content){
+				 	// 		console.log(content);
+				 	// 	}
+				 	// } 
+				 })
+			 })
+		</script>
+	</body>
+
+</html>
